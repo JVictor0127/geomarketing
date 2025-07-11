@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico Interativo: Geomarketing no Brasil</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilos para o smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 text-gray-800 p-4 sm:p-8 rounded-lg shadow-xl">
+
+    <!-- Header da página -->
+    <header class="text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-orange-800 leading-tight mb-4">
+            Geomarketing no Brasil: Um Infográfico Interativo
+        </h1>
+        <p class="text-xl sm:text-2xl text-orange-600">
+            Panorama Abrangente, Aplicações Estratégicas e Perspectivas Futuras
+        </p>
+    </header>
+
+    <!-- Navegação sticky -->
+    <nav id="main-nav" class="sticky top-0 bg-white bg-opacity-90 backdrop-blur-sm p-4 rounded-xl shadow-lg mb-8 z-10 flex flex-wrap justify-center gap-2 sm:gap-4">
+        <!-- Os botões de navegação serão injetados aqui pelo JavaScript -->
+    </nav>
+
+    <!-- Conteúdo principal das seções -->
+    <main id="infographic-content">
+        <!-- As seções serão injetadas aqui pelo JavaScript -->
+    </main>
+
+    <!-- Footer da página -->
+    <footer class="text-center text-gray-600 mt-12 text-sm">
+        <p>&copy; 2025 Infográfico de Geomarketing. Todos os direitos reservados.</p>
+        <p>Desenvolvido com HTML, CSS (Tailwind CSS) e JavaScript.</p>
+    </footer>
+
+    <script>
+        // Dados do infográfico
+        const infographicData = {
+            sections: [
+                {
+                    id: 'introducao',
+                    title: '1. Introdução ao Geomarketing no Brasil',
+                    content: `
+                        <p class="text-lg mb-4">A análise de mercado é um pilar fundamental, e o Geomarketing, ou inteligência geográfica, utiliza informações de localização para otimizar campanhas e segmentar conteúdos. Dada a vasta diversidade regional do Brasil, a segmentação geográfica é essencial para o marketing digital, adaptando estratégias às particularidades culturais e econômicas de cada região.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Conceitos Fundamentais:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">Área de Influência:</strong> Região em torno de um ponto comercial que concentra a maior parte das vendas e consumidores, dividida em zonas primária (50-70%), secundária (20-30%) e terciária (10-20%).</li>
+                            <li><strong class="text-orange-600">DNA Geográfico:</strong> Compilação das especificações necessárias para o sucesso de uma marca em uma localização, incluindo volume populacional, distribuição de renda e presença de concorrentes.</li>
+                        </ul>
+                        <p class="text-lg mb-4">O geomarketing evoluiu de uma análise estática (alfinetes em mapas) para uma inteligência dinâmica e preditiva, impulsionada por dados de localização em tempo real, permitindo a hiper-personalização e otimização contínua das campanhas.</p>
+                    `,
+                    chart: {
+                        type: 'bar',
+                        title: 'Distribuição de Consumidores por Área de Influência',
+                        data: [
+                            { name: 'Zona Primária', value: 60, color: '#F97316' }, // Orange 500
+                            { name: 'Zona Secundária', value: 25, color: '#FB923C' }, // Orange 400
+                            { name: 'Zona Terciária', value: 15, color: '#FDBA74' }, // Orange 300
+                        ],
+                        description: 'Percentual de consumidores em cada zona da área de influência.',
+                    },
+                },
+                {
+                    id: 'aplicacoes',
+                    title: '2. Aplicações Setoriais do Geomarketing',
+                    content: `
+                        <p class="text-lg mb-4">O geomarketing demonstra sua versatilidade e impacto em diversos setores da economia brasileira, fornecendo inteligência de localização para otimizar estratégias e resultados.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Setores e Aplicações Chave:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">Varejo e Expansão de Redes:</strong> Seleção de PDVs ideais, otimização do mix de produtos, análise de concorrência. Ex: Expansão da OXXO em São Paulo.</li>
+                            <li><strong class="text-orange-600">Indústria de Bens de Consumo:</strong> Inteligência comercial, prospecção de clientes, gestão de territórios para equipes de vendas.</li>
+                            <li><strong class="text-orange-600">Franquias:</strong> Avaliação de PDVs, delimitação de territórios contratuais, prevenção de canibalização. Ex: Estudo de Potencial de Expansão (EPEX).</li>
+                            <li><strong class="text-orange-600">Agronegócio:</strong> Gestão, monitoramento e controle de processos produtivos, otimização da produção.</li>
+                            <li><strong class="text-orange-600">Educação:</strong> Direcionamento de marketing para estudantes, análise de concorrência e localização de campi.</li>
+                            <li><strong class="text-orange-600">Saúde:</strong> Localização estratégica de clínicas e academias, análise de perfil populacional.</li>
+                            <li><strong class="text-orange-600">Serviços Públicos e Planejamento Urbano:</strong> Formulação de políticas públicas, alocação de recursos, análise de desigualdades sociais.</li>
+                            <li><strong class="text-orange-600">Sustentabilidade (ESG):</strong> Otimização logística, identificação de mercados para produtos verdes.</li>
+                        </ul>
+                    `,
+                    chart: {
+                        type: 'pie',
+                        title: 'Setores que mais utilizam Geomarketing',
+                        data: [
+                            { name: 'Varejo', value: 30, color: '#EA580C' }, // Orange 600
+                            { name: 'Franquias', value: 20, color: '#F97316' }, // Orange 500
+                            { name: 'Bens de Consumo', value: 15, color: '#FB923C' }, // Orange 400
+                            { name: 'Agronegócio', value: 10, color: '#FDBA74' }, // Orange 300
+                            { name: 'Outros', value: 25, color: '#FED7AA' }, // Orange 200
+                        ],
+                        description: 'Distribuição estimada do uso de geomarketing por setor no Brasil.',
+                    },
+                },
+                {
+                    id: 'tecnologias',
+                    title: '3. Tecnologias e Ferramentas',
+                    content: `
+                        <p class="text-lg mb-4">A paisagem tecnológica que suporta o geomarketing no Brasil é diversificada, abrangendo desde ferramentas de acesso livre até plataformas avançadas e tecnologias emergentes.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Ferramentas e Tecnologias Chave:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">Gratuitas e Acessíveis:</strong> Google Maps, Street View, Google Earth, IBGE (Censo Demográfico), BatchGeo, Fusion Tables.</li>
+                            <li><strong class="text-orange-600">Plataformas Avançadas:</strong> Mapfry, Geofusion, Economapas, Cognatis (NETtool®, MAPpoint®), GisTarget Consultoria. Oferecem dados proprietários, modelos de propensão e suporte.</li>
+                            <li><strong class="text-orange-600">Tecnologias Emergentes:</strong>
+                                <ul class="list-circle list-inside ml-4">
+                                    <li><strong class="text-amber-500">Inteligência Artificial (IA):</strong> Análise preditiva, segmentação avançada, otimização em tempo real.</li>
+                                    <li><strong class="text-amber-500">Big Data:</strong> Processamento de grandes volumes de dados de localização para insights precisos.</li>
+                                    <li><strong class="text-amber-500">Internet das Coisas (IoT):</strong> Coleta de dados de localização em tempo real via dispositivos (smartphones, wearables).</li>
+                                    <li><strong class="text-amber-500">Realidade Aumentada (RA):</strong> Cria conexões digitais com espaços físicos, transformando a experiência do cliente.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    `,
+                    chart: {
+                        type: 'bar',
+                        title: 'Adoção de Tecnologias Emergentes no Geomarketing',
+                        data: [
+                            { name: 'IA', value: 28, color: '#F59E0B' }, // Amber 500
+                            { name: 'Big Data', value: 60, color: '#FBBF24' }, // Amber 400
+                            { name: 'IoT', value: 40, color: '#FCD34D' }, // Amber 300
+                            { name: 'RA', value: 15, color: '#FDE68A' }, // Amber 200
+                        ],
+                        description: 'Percentual estimado de empresas brasileiras utilizando cada tecnologia (dados de IA são mais específicos).',
+                    },
+                },
+                {
+                    id: 'maturidade-tendencias',
+                    title: '4. Maturidade e Tendências Atuais',
+                    content: `
+                        <p class="text-lg mb-4">O mercado brasileiro de geomarketing está em um processo acelerado de transformação digital, impulsionado pela necessidade de antecipar o comportamento do consumidor.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Nível de Adoção:</h3>
+                        <p class="text-lg mb-4">Grandes corporações já utilizam geomarketing, e PMEs estão começando a adotar. No entanto, a adoção de IA ainda está em estágio inicial (apenas 28% das empresas brasileiras utilizam IA), indicando uma lacuna tecnológica.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Principais Tendências para 2024-2025:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">Digitalização e Personalização:</strong> Foco em experiências personalizadas baseadas em localização e comportamento.</li>
+                            <li><strong class="text-orange-600">Integração de IA e Análise de Big Data:</strong> Para análises preditivas mais precisas e otimização em tempo real.</li>
+                            <li><strong class="text-orange-600">Expansão da IoT e 5G:</strong> Maior capacidade de coletar e utilizar dados de localização em tempo real.</li>
+                            <li><strong class="text-orange-600">Foco na Geração Z:</strong> Compreensão dos hábitos de consumo e comportamentos únicos dessa geração.</li>
+                            <li><strong class="text-orange-600">Enriquecimento de Dados:</strong> Esforço contínuo para aprimorar bases de dados geográficos.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Comparativo Brasil vs. Mercados Desenvolvidos:</h3>
+                        <p class="text-lg mb-4">O mercado global de geomarketing cresce rapidamente (CAGR de 24,0% de 2024 a 2033). A América Latina deve atingir US$ 5.910,3 milhões até 2030 (CAGR de 24,8%). Em 2023, a América Latina representou 7,1% do mercado global, enquanto a América do Norte dominou com 36,4%. O Brasil possui uma "lacuna de maturidade de dados" em comparação com mercados desenvolvidos, o que exige investimentos em infraestrutura de dados e talentos em IA.</p>
+                    `,
+                    chart: {
+                        type: 'line',
+                        title: 'Crescimento Projetado do Mercado de Geomarketing (CAGR %)',
+                        data: [
+                            { name: 'Global', value: 24.0, color: '#16A34A' }, // Green 600
+                            { name: 'América Latina', value: 24.8, color: '#22C55E' }, // Green 500
+                        ],
+                        description: 'Taxa Composta de Crescimento Anual projetada para o mercado de geomarketing.',
+                    },
+                },
+                {
+                    id: 'desafios-barreiras',
+                    title: '5. Desafios e Barreiras',
+                    content: `
+                        <p class="text-lg mb-4">A implementação de estratégias de geomarketing no Brasil enfrenta diversos obstáculos, desde questões técnicas e de acesso a dados até barreiras culturais e de percepção de valor.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Desafios Técnicos e de Acesso a Dados Confiáveis:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">Ausência/Defasagem de Dados Oficiais:</strong> Dificuldade em obter dados confiáveis e atualizados, especialmente em municípios menores.</li>
+                            <li><strong class="text-orange-600">Carência de Capacitação Técnica:</strong> Falta de profissionais com proficiência em análise de dados georreferenciados.</li>
+                            <li><strong class="text-orange-600">Interoperabilidade entre Plataformas:</strong> Dificuldade em integrar diferentes ferramentas (QGIS, ArcGIS, Power BI).</li>
+                            <li><strong class="text-orange-600">Falta de Sistemas de Gestão Integrados (PMEs):</strong> Resulta em redundâncias e erros.</li>
+                            <li><strong class="text-orange-600">Adoção da IA:</strong> Desafios como falta de expertise interna, resistência cultural e infraestrutura inadequada.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Barreiras Culturais e de Integração de Dados:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">Dependência da Intuição:</strong> Prevalência da intuição em detrimento de abordagens orientadas por dados.</li>
+                            <li><strong class="text-orange-600">Baixa Utilização de Dados Corporativos:</strong> Apenas cerca de 1% dos dados corporativos são efetivamente utilizados.</li>
+                            <li><strong class="text-orange-600">Dificuldade Sistêmica na Integração e Padronização de Dados.</strong></li>
+                        </ul>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Considerações sobre Retorno sobre Investimento (ROI):</h3>
+                        <p class="text-lg mb-4">Embora o geomarketing otimize o mix de produtos e mensure o potencial de mercado, o ROI inicial pode ser baixo ou inexistente, especialmente quando há falta de compreensão do valor diferencial. A comunicação eficaz da proposta de valor é essencial para justificar investimentos.</p>
+                    `,
+                    chart: {
+                        type: 'doughnut',
+                        title: 'Utilização de Dados Corporativos',
+                        data: [
+                            { name: 'Dados Utilizados', value: 1, color: '#F59E0B' }, // Amber 500
+                            { name: 'Dados Não Utilizados', value: 99, color: '#FCD34D' }, // Amber 300
+                        ],
+                        description: 'Percentual de dados corporativos efetivamente utilizados para análise.',
+                    },
+                },
+                {
+                    id: 'aspectos-regulatorios',
+                    title: '6. Aspectos Regulatórios: O Impacto da LGPD',
+                    content: `
+                        <p class="text-lg mb-4">A Lei Geral de Proteção de Dados (LGPD) no Brasil impõe um novo cenário para a coleta e o tratamento de dados geográficos no geomarketing, priorizando a privacidade e os direitos dos titulares.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Classificação de Dados de Localização sob a LGPD:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">Dados Pessoais:</strong> "Dados de localização do celular" são explicitamente classificados como Dados Pessoais. A LGPD se aplica a qualquer atividade de tratamento de dados pessoais no Brasil.</li>
+                            <li><strong class="text-orange-600">Dados Sensíveis:</strong> Subconjunto de dados pessoais que exigem maior atenção (origem racial, opinião política, saúde, etc.).</li>
+                            <li><strong class="text-orange-600">Dados Públicos:</strong> Podem ser processados sem novo consentimento para finalidades legítimas, mas o compartilhamento com outras organizações geralmente exige novo consentimento.</li>
+                            <li><strong class="text-orange-600">Anonimização de Dados:</strong> Se os dados forem verdadeiramente anonimizados, a LGPD não se aplica. Dados pseudonimizados (identificação pode ser reconstruída) permanecem sujeitos à LGPD.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Requisitos de Consentimento e Anonimização:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">Consentimento Explícito:</strong> Os titulares devem autorizar de forma explícita e inequívoca o uso de suas informações para finalidades específicas.</li>
+                            <li><strong class="text-orange-600">Revogação do Consentimento:</strong> Titulares têm o direito de revogar o consentimento a qualquer momento.</li>
+                            <li><strong class="text-orange-600">Novo Consentimento para Compartilhamento:</strong> Necessário para compartilhar dados com outras entidades, salvo exceções legais.</li>
+                        </ul>
+                        <p class="text-lg mb-4">A LGPD impõe restrições significativas, mas também oferece benefícios como fortalecimento da reputação e aumento da confiança do cliente. A não conformidade acarreta multas de até R$ 50 milhões.</p>
+                    `,
+                    chart: {
+                        type: 'bar',
+                        title: 'Penalidades da LGPD',
+                        data: [
+                            { name: 'Multa Máxima (R$)', value: 50000000, color: '#DC2626' }, // Red 600
+                            { name: 'Percentual do Faturamento', value: 2, color: '#F87171' }, // Red 400
+                        ],
+                        description: 'Multa máxima em reais e percentual do faturamento em caso de infração à LGPD.',
+                    },
+                },
+                {
+                    id: 'iniciativas-pesquisa',
+                    title: '7. Iniciativas Governamentais e Pesquisa Acadêmica',
+                    content: `
+                        <p class="text-lg mb-4">O governo brasileiro e as instituições de pesquisa desempenham um papel central no fomento e na aplicação da inteligência geográfica para o desenvolvimento regional e a inovação.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Programas Governamentais:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">IBGE (Instituto Brasileiro de Geografia e Estatística):</strong> Principal entidade para coleta e disseminação de dados estatísticos e geográficos (Censo Demográfico).</li>
+                            <li><strong class="text-orange-600">Programa Nacional de Inteligência e Governança Estatística e Geocientífica (2025-2026):</strong> Visa subsidiar políticas públicas preditivas com dados integrados.</li>
+                            <li><strong class="text-orange-600">PNDR (Política Nacional de Desenvolvimento Regional) e NIR (Núcleo de Inteligência Regional):</strong> Redução das desigualdades regionais e monitoramento da PNDR.</li>
+                            <li><strong class="text-orange-600">INDE (Infraestrutura Nacional de Dados Espaciais):</strong> Promove a organização e integração de dados geoespaciais governamentais.</li>
+                            <li><strong class="text-orange-600">Plano Brasileiro de IA (PBIA) 2024-2028:</strong> Investimento de R$ 1,76 bilhão para uso de IA em serviços públicos.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold mb-2 text-orange-700">Principais Instituições de Pesquisa:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li><strong class="text-orange-600">Universidades:</strong> FGV-EAESP, USP (GEOLab), PUC-Rio, UFG (PPGGECON), FAVENI, UFC. Conduzem pesquisas e oferecem cursos especializados.</li>
+                            <li><strong class="text-orange-600">Centros de Pesquisa e Consultorias:</strong> IEMI – Inteligência de Mercado, Data2Market, GisTarget Consultoria, Cognatis, Cortex Intelligence, ANPD, CGEE. Produzem relatórios, fornecem insights e soluções.</li>
+                        </ul>
+                        <p class="text-lg mb-4">A sinergia entre governo, academia e setor privado é fundamental para a inovação contínua e a adaptação das práticas de geomarketing no Brasil.</p>
+                    `,
+                    chart: {
+                        type: 'bar',
+                        title: 'Investimento Projetado em IA para Serviços Públicos (R$ Bilhões)',
+                        data: [
+                            { name: 'PBIA 2024-2028', value: 1.76, color: '#2563EB' }, // Blue 600
+                        ],
+                        description: 'Investimento previsto no Plano Brasileiro de IA para o uso de IA em serviços públicos.',
+                    },
+                },
+            ],
+        };
+
+        // Variável para controlar a seção ativa
+        let activeSectionId = infographicData.sections[0].id;
+
+        /**
+         * Cria um elemento SVG.
+         * @param {string} tag - O nome da tag SVG (ex: 'svg', 'rect', 'circle').
+         * @param {object} attributes - Um objeto de atributos para o elemento.
+         * @returns {SVGElement} O elemento SVG criado.
+         */
+        function createSVGElement(tag, attributes) {
+            const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
+            for (const key in attributes) {
+                element.setAttribute(key, attributes[key]);
+            }
+            return element;
+        }
+
+        /**
+         * Renderiza um gráfico de barras.
+         * @param {HTMLElement} container - O elemento DOM onde o gráfico será renderizado.
+         * @param {object} chartData - Os dados e configurações do gráfico.
+         */
+        function renderBarChart(container, chartData) {
+            container.innerHTML = ''; // Limpa o conteúdo anterior
+            const maxVal = Math.max(...chartData.data.map(d => d.value));
+
+            const chartWrapper = document.createElement('div');
+            chartWrapper.className = 'flex w-full h-full items-end justify-around';
+            chartWrapper.style.height = '12rem'; // Altura fixa para o gráfico
+
+            chartData.data.forEach((item, index) => {
+                const barContainer = document.createElement('div');
+                barContainer.className = 'flex flex-col items-center mx-2 h-full justify-end';
+
+                const barHeight = (item.value / maxVal) * 90; // Escala para 90% da altura do contêiner
+                const bar = document.createElement('div');
+                bar.className = 'w-10 rounded-t-lg transition-all duration-500 ease-out';
+                bar.style.height = `${barHeight}%`;
+                bar.style.backgroundColor = item.color;
+
+                const nameSpan = document.createElement('span');
+                nameSpan.className = 'text-sm text-gray-600 mt-2 text-center';
+                nameSpan.textContent = item.name;
+
+                const valueSpan = document.createElement('span');
+                valueSpan.className = 'text-xs text-gray-500';
+                valueSpan.textContent = `${item.value}${item.name.includes('(R$)') ? '' : '%'}`;
+
+                barContainer.appendChild(bar);
+                barContainer.appendChild(nameSpan);
+                barContainer.appendChild(valueSpan);
+                chartWrapper.appendChild(barContainer);
+            });
+            container.appendChild(chartWrapper);
+        }
+
+        /**
+         * Renderiza um gráfico de pizza.
+         * @param {HTMLElement} container - O elemento DOM onde o gráfico será renderizado.
+         * @param {object} chartData - Os dados e configurações do gráfico.
+         */
+        function renderPieChart(container, chartData) {
+            container.innerHTML = ''; // Limpa o conteúdo anterior
+
+            const svg = createSVGElement('svg', {
+                class: 'w-full h-full',
+                viewBox: '0 0 100 100'
+            });
+
+            let lastAngle = 0;
+            chartData.data.forEach((item) => {
+                const angle = (item.value / 100) * 360;
+                const largeArcFlag = angle > 180 ? 1 : 0;
+                const x1 = 50 + 40 * Math.cos((lastAngle - 90) * Math.PI / 180);
+                const y1 = 50 + 40 * Math.sin((lastAngle - 90) * Math.PI / 180);
+                const x2 = 50 + 40 * Math.cos((lastAngle + angle - 90) * Math.PI / 180);
+                const y2 = 50 + 40 * Math.sin((lastAngle + angle - 90) * Math.PI / 180);
+
+                const path = createSVGElement('path', {
+                    d: `M 50 50 L ${x1} ${y1} A 40 40 0 ${largeArcFlag} 1 ${x2} ${y2} Z`,
+                    fill: item.color
+                });
+                svg.appendChild(path);
+                lastAngle += angle;
+            });
+
+            const legend = document.createElement('div');
+            legend.className = 'absolute inset-0 flex flex-col items-center justify-center';
+            chartData.data.forEach(item => {
+                const legendItem = document.createElement('div');
+                legendItem.className = 'flex items-center text-sm text-gray-700';
+                legendItem.innerHTML = `<span class="w-3 h-3 rounded-full mr-2" style="background-color: ${item.color}"></span>${item.name}: ${item.value}%`;
+                legend.appendChild(legendItem);
+            });
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'relative w-48 h-48';
+            wrapper.appendChild(svg);
+            wrapper.appendChild(legend);
+            container.appendChild(wrapper);
+        }
+
+        /**
+         * Renderiza um gráfico de linha.
+         * @param {HTMLElement} container - O elemento DOM onde o gráfico será renderizado.
+         * @param {object} chartData - Os dados e configurações do gráfico.
+         */
+        function renderLineChart(container, chartData) {
+            container.innerHTML = ''; // Limpa o conteúdo anterior
+            const maxVal = Math.max(...chartData.data.map(d => d.value));
+            const padding = 10; // Preenchimento das bordas do SVG
+            const svgWidth = 100;
+            const svgHeight = 70; // Altura reduzida para deixar menos esticado
+            const chartAreaWidth = svgWidth - 2 * padding;
+            const chartAreaHeight = svgHeight - 2 * padding;
+
+            const svg = createSVGElement('svg', {
+                class: 'w-full h-full bg-gray-50 rounded-lg', // Adiciona um fundo claro
+                viewBox: `0 0 ${svgWidth} ${svgHeight}`,
+                preserveAspectRatio: 'none'
+            });
+
+            // Eixo Y
+            svg.appendChild(createSVGElement('line', { x1: padding, y1: svgHeight - padding, x2: padding, y2: padding, stroke: '#E5E7EB', 'stroke-width': '1' }));
+            // Eixo X
+            svg.appendChild(createSVGElement('line', { x1: padding, y1: svgHeight - padding, x2: svgWidth - padding, y2: svgHeight - padding, stroke: '#E5E7EB', 'stroke-width': '1' }));
+
+            // Rótulos do eixo Y e linhas de grade
+            const numTicks = 5; // Número de marcações no eixo Y
+            for (let i = 0; i <= numTicks; i++) {
+                const value = (maxVal / numTicks) * i;
+                const yPos = (svgHeight - padding) - (value / maxVal) * chartAreaHeight;
+
+                // Linha de grade
+                svg.appendChild(createSVGElement('line', {
+                    x1: padding,
+                    y1: yPos,
+                    x2: svgWidth - padding,
+                    y2: yPos,
+                    stroke: '#E5E7EB',
+                    'stroke-width': '0.5',
+                    'stroke-dasharray': '2,2'
+                }));
+
+                // Rótulo do eixo Y
+                svg.appendChild(createSVGElement('text', {
+                    x: padding - 2, // Ligeiramente à esquerda do eixo
+                    y: yPos + 1.5, // Ajuste para a linha de base do texto
+                    'text-anchor': 'end',
+                    'font-size': '5',
+                    fill: '#6B7280',
+                    textContent: `${value.toFixed(1)}%`
+                }));
+            }
+
+            // Pontos de dados e linhas
+            chartData.data.forEach((item, index) => {
+                const x = padding + (index / (chartData.data.length - 1)) * chartAreaWidth;
+                const y = (svgHeight - padding) - (item.value / maxVal) * chartAreaHeight;
+
+                const nextItem = chartData.data[index + 1];
+                const nextX = nextItem ? padding + ((index + 1) / (chartData.data.length - 1)) * chartAreaWidth : x;
+                const nextY = nextItem ? (svgHeight - padding) - (nextItem.value / maxVal) * chartAreaHeight : y;
+
+                if (nextItem) {
+                    svg.appendChild(createSVGElement('line', { x1: x, y1: y, x2: nextX, y2: nextY, stroke: item.color, 'stroke-width': '2' }));
+                }
+                svg.appendChild(createSVGElement('circle', { cx: x, cy: y, r: '3', fill: item.color, stroke: 'white', 'stroke-width': '1' })); // Círculo maior
+
+                // Rótulo de valor acima do ponto
+                svg.appendChild(createSVGElement('text', { x: x, y: y - 5, 'text-anchor': 'middle', 'font-size': '6', fill: item.color, textContent: `${item.value}%` }));
+
+                // Rótulo de categoria abaixo do eixo X
+                svg.appendChild(createSVGElement('text', { x: x, y: svgHeight - padding + 8, 'text-anchor': 'middle', 'font-size': '6', fill: '#6B7280', textContent: item.name }));
+            });
+            container.appendChild(svg);
+        }
+
+        /**
+         * Renderiza um gráfico de rosca (doughnut).
+         * @param {HTMLElement} container - O elemento DOM onde o gráfico será renderizado.
+         * @param {object} chartData - Os dados e configurações do gráfico.
+         */
+        function renderDoughnutChart(container, chartData) {
+            container.innerHTML = ''; // Limpa o conteúdo anterior
+
+            const svg = createSVGElement('svg', {
+                class: 'w-full h-full',
+                viewBox: '0 0 100 100'
+            });
+
+            let lastAngle = 0;
+            const radius = 40; // Raio externo
+            const innerRadius = 25; // Raio interno para fazer o "buraco"
+
+            chartData.data.forEach((item) => {
+                const angle = (item.value / 100) * 360;
+                const largeArcFlag = angle > 180 ? 1 : 0;
+
+                // Coordenadas para o arco externo
+                const x1_outer = 50 + radius * Math.cos((lastAngle - 90) * Math.PI / 180);
+                const y1_outer = 50 + radius * Math.sin((lastAngle - 90) * Math.PI / 180);
+                const x2_outer = 50 + radius * Math.cos((lastAngle + angle - 90) * Math.PI / 180);
+                const y2_outer = 50 + radius * Math.sin((lastAngle + angle - 90) * Math.PI / 180);
+
+                // Coordenadas para o arco interno
+                const x1_inner = 50 + innerRadius * Math.cos((lastAngle + angle - 90) * Math.PI / 180);
+                const y1_inner = 50 + innerRadius * Math.sin((lastAngle + angle - 90) * Math.PI / 180);
+                const x2_inner = 50 + innerRadius * Math.cos((lastAngle - 90) * Math.PI / 180);
+                const y2_inner = 50 + innerRadius * Math.sin((lastAngle - 90) * Math.PI / 180);
+
+                const path = createSVGElement('path', {
+                    d: `M ${x1_outer} ${y1_outer} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2_outer} ${y2_outer} L ${x1_inner} ${y1_inner} A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${x2_inner} ${y2_inner} Z`,
+                    fill: item.color
+                });
+                svg.appendChild(path);
+                lastAngle += angle;
+            });
+
+            const legend = document.createElement('div');
+            legend.className = 'absolute inset-0 flex flex-col items-center justify-center';
+            chartData.data.forEach(item => {
+                const legendItem = document.createElement('div');
+                legendItem.className = 'flex items-center text-sm text-gray-700';
+                legendItem.innerHTML = `<span class="w-3 h-3 rounded-full mr-2" style="background-color: ${item.color}"></span>${item.name}: ${item.value}%`;
+                legend.appendChild(legendItem);
+            });
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'relative w-48 h-48';
+            wrapper.appendChild(svg);
+            wrapper.appendChild(legend);
+            container.appendChild(wrapper);
+        }
+
+        /**
+         * Renderiza o gráfico apropriado com base no tipo.
+         * @param {HTMLElement} chartContainer - O contêiner DOM para o gráfico.
+         * @param {object} chartConfig - A configuração do gráfico (type, data, title, description).
+         */
+        function renderChart(chartContainer, chartConfig) {
+            if (!chartConfig || !chartConfig.data || chartConfig.data.length === 0) {
+                chartContainer.innerHTML = '<p class="text-center text-gray-500">Dados do gráfico indisponíveis.</p>';
+                return;
+            }
+
+            const chartWrapper = document.createElement('div');
+            chartWrapper.className = 'bg-white p-6 rounded-lg shadow-md mb-6 transition-all duration-300 hover:shadow-lg';
+
+            const titleElement = document.createElement('h3');
+            titleElement.className = 'text-xl font-semibold text-gray-800 mb-4 text-center';
+            titleElement.textContent = chartConfig.title;
+            chartWrapper.appendChild(titleElement);
+
+            const chartArea = document.createElement('div');
+            chartArea.className = 'flex justify-center items-end h-48'; // Altura fixa para a área do gráfico
+            chartWrapper.appendChild(chartArea);
+
+            // Chama a função de renderização específica do tipo de gráfico
+            switch (chartConfig.type) {
+                case 'bar':
+                    renderBarChart(chartArea, chartConfig);
+                    break;
+                case 'pie':
+                    renderPieChart(chartArea, chartConfig);
+                    break;
+                case 'line':
+                    renderLineChart(chartArea, chartConfig);
+                    break;
+                case 'doughnut':
+                    renderDoughnutChart(chartArea, chartConfig);
+                    break;
+                default:
+                    chartArea.innerHTML = '<p class="text-center text-gray-500">Tipo de gráfico não suportado.</p>';
+            }
+
+            const descriptionElement = document.createElement('p');
+            descriptionElement.className = 'text-sm text-gray-500 mt-4 text-center';
+            descriptionElement.textContent = chartConfig.description;
+            chartWrapper.appendChild(descriptionElement);
+
+            chartContainer.appendChild(chartWrapper);
+        }
+
+        /**
+         * Renderiza todas as seções do infográfico.
+         */
+        function renderInfographicSections() {
+            const mainContent = document.getElementById('infographic-content');
+            mainContent.innerHTML = ''; // Limpa o conteúdo existente
+
+            infographicData.sections.forEach(section => {
+                const sectionElement = document.createElement('section');
+                sectionElement.id = section.id;
+                sectionElement.className = 'bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-12 transform transition-transform duration-500 ease-out hover:scale-[1.01]';
+
+                const titleElement = document.createElement('h2');
+                titleElement.className = 'text-3xl sm:text-4xl font-bold text-orange-700 mb-6 text-center';
+                titleElement.textContent = section.title;
+                sectionElement.appendChild(titleElement);
+
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'prose max-w-none text-gray-700 leading-relaxed';
+                contentDiv.innerHTML = section.content;
+                sectionElement.appendChild(contentDiv);
+
+                if (section.chart) {
+                    const chartDiv = document.createElement('div');
+                    chartDiv.className = 'mt-8';
+                    renderChart(chartDiv, section.chart);
+                    sectionElement.appendChild(chartDiv);
+                }
+
+                mainContent.appendChild(sectionElement);
+            });
+        }
+
+        /**
+         * Renderiza os botões de navegação.
+         */
+        function renderNavigation() {
+            const navContainer = document.getElementById('main-nav');
+            navContainer.innerHTML = ''; // Limpa os botões existentes
+
+            infographicData.sections.forEach(section => {
+                const button = document.createElement('button');
+                button.textContent = section.title.split('.')[0]; // Pega apenas o número da seção
+                button.className = `
+                    px-4 py-2 rounded-full font-medium text-sm sm:text-base
+                    transition-all duration-300 ease-in-out
+                    ${activeSectionId === section.id
+                        ? 'bg-orange-600 text-white shadow-md transform scale-105'
+                        : 'bg-gray-200 text-gray-700 hover:bg-orange-200 hover:text-orange-700'
+                    }
+                `;
+                button.onclick = () => handleNavClick(section.id);
+                navContainer.appendChild(button);
+            });
+        }
+
+        /**
+         * Lida com o clique nos botões de navegação.
+         * @param {string} id - O ID da seção para a qual navegar.
+         */
+        function handleNavClick(id) {
+            activeSectionId = id;
+            renderNavigation(); // Atualiza a classe do botão ativo
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Inicialização da aplicação quando o DOM estiver completamente carregado
+        document.addEventListener('DOMContentLoaded', () => {
+            renderInfographicSections();
+            renderNavigation();
+
+            // Rola para a seção inicial se houver um hash na URL
+            if (window.location.hash) {
+                const id = window.location.hash.substring(1);
+                activeSectionId = id;
+                renderNavigation(); // Atualiza o estado do botão ativo
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView(); // Sem smooth behavior para o carregamento inicial
+                }
+            }
+        });
+    </script>
+</body>
+</html>
